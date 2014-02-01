@@ -1,0 +1,59 @@
+/*--- Modal Factory Styles ---*/
+
+body {
+  position: relative; // to enable the centering of the modal relative to the document's body
+}
+
+.ng-modal-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #273a47;
+  opacity: .5;
+  -ms-filter: "alpha(opacity = 50)";
+}
+
+.ng-modal-container {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;    
+}
+
+.ng-modal-container .ng-modal {
+    width: 400px;
+    margin: auto;
+    position: absolute;
+    top: 50%; left: 50%;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    padding: 10px;
+    background: #ffffff;
+    border-radius: 3px;
+    border: 1px solid #2f2f2f;
+    text-align: center;    
+}
+
+.ng-modal-container .ng-modal .btn {
+   margin: 20px;
+}
+
+.ng-modal-container .ng-modal .ng-modal-close {
+    color: grey;
+    position: relative;
+    top: 0;
+    left: 0;
+    float: right;
+    text-align: right;
+    text-decoration: none;
+    
+}
+
+.ng-modal-container .ng-modal .ng-modal-close:hover {
+    color: grey;
+}

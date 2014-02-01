@@ -18,18 +18,23 @@ The config object also lets the user define custom CSS classes for the modal.
 
 ##How to use:
 
-* update the modalfactory.js to your AngularJS app name
-* register a new factory for your app
+1. update the modalfactory.js to your AngularJS app name, in case you use other than "app"
+2. inject it as a controller dependency
+3. instantiate the service as a new scope variable
+4. use the modal functions wherever you please, in the controller :)
+
 
 \- Example:
- 
-    angular.module('your-app-name').factory('desired-modal-service-name', function(modalfactory) {
-        return modalfactory ({
-            // your config object goes here
-        })
+ 	
+ 	app.controller('MainCtrl',['$scope','modalFactory', function ($scope, modalFactory) {
+        // instantiate modal service
+        $scope.statusModal = new modalFactory({
+            // your config options go here
+        });
+    
+        $scope.turnMeOn = $scope.statusModal.turnMeOn;    
     })
 
-* use the modal functions wherever you please, in the controller :)
 
 The config object has the following options:
 
@@ -47,9 +52,9 @@ The config object has the following options:
 	  overlayDivClass : [String] overlay div CSS class name *
 	}
 	
-### Example
+## Example
 Check the [Codepen demo](http://codepen.io/capelo/pen/wKeEA "click here to see the Codepen demo") I made to see this service in use.
 In the future I'll put demo files in this repo as well.
 
-### Future Work
+## Future Work
 I decided to implement this as a factory, not a directive since I didn't want to polute the markup with more elements, so I'm yet to figure a way to share the main controller's function with the scope of the modal. Probably I'll just add a cancel/confirm feature, and will use the angular's broadcast system for the controller to figure out which option was selected.
