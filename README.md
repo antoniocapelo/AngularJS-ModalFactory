@@ -48,7 +48,7 @@ The config object has the following options:
 	}
 	
 ### Example
-Check the demo [Codepen demo](http://codepen.io/capelo/pen/wKeEA "click here to see the Codepen demo") I made to see this service in use.
+Check the [Codepen demo](http://codepen.io/capelo/pen/wKeEA "click here to see the Codepen demo") I made to see this service in use.
 In the future I'll put demo files in this repo as well.
 
 ### Future Work
