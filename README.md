@@ -1,7 +1,7 @@
-AngularJS-ModalService
+AngularJS-ModalFactory
 ======================
 
-#### Simple AngularJS service for the creation of modal dialogs.
+#### Simple AngularJS factory for the creation of modal dialogs.
 
 ## Description
 This service returns a modal dialog factory, based on a configuration object passed on each creation. 
