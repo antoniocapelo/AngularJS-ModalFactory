@@ -15,8 +15,8 @@
  *  2 - register a new factory for your app
  *  Example:
  *
- *  angular.module('your-app-name').factory('desired-modal-factory-name', function(modalservice) {
-        return modalservice ({
+ *  angular.module('your-app-name').factory('desired-modal-factory-name', function(modalfactory) {
+        return modalfactory ({
             // your config object goes here
         })
     })
@@ -25,7 +25,7 @@
  *
  * The config object has the following options:
  * {
- *      // one of these 2 need to be defined for the service to work, or else an error will be thrown
+ *      // one of these 2 need to be defined for the factory to work, or else an error will be thrown
  *      template: [String] with the html content of the modal,
  *      templateUrl: [String] path to an external html file (for more complex content),
  *
@@ -39,7 +39,7 @@
  *
  */
 angular.module('appname').
-    factory('modalservice', function ($compile, $http, $rootScope) {
+    factory('modalfactory', function ($compile, $http, $rootScope) {
     return function (config) {
 
         // check that there's a template provided

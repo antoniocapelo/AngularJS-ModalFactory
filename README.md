@@ -23,7 +23,7 @@ The config object also lets the user define custom CSS classes for the modal.
 
 \- Example:
  
-    angular.module('your-app-name').factory('desired-modal-service-name', function(modalservice) {
+    angular.module('your-app-name').factory('desired-modal-service-name', function(modalfactory) {
         return modalfactory ({
             // your config object goes here
         })
