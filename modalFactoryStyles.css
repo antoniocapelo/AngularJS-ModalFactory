@@ -45,13 +45,13 @@ body {
 
 .ng-modal-container .ng-modal .ng-modal-close {
     color: grey;
-    position: relative;
-    top: 0;
-    left: 0;
-    float: right;
-    text-align: right;
     text-decoration: none;
-    
+    padding-right: 5px;
+}
+
+.ng-modal-container .ng-modal-close-container {
+    text-align: right;
+    line-height: 20px;
 }
 
 .ng-modal-container .ng-modal .ng-modal-close:hover {

@@ -65,11 +65,15 @@ app.factory('ModalFactory', function ($compile, $http, $rootScope) {
             $http.get(config.templateUrl).then(function(response) {
                 template = response.data;
                 // the html var has to be set on the 2 options of the conditional since one of them has an async method
-                html = '<div class="' + containerClass + '"><div class="' + baseClass + '"><a href="" class="' + baseClass + '-close" ng-click="turnMeOff()">&times;</a>' + template + '</div></div>';
+                html = '<div class="' + containerClass + '"><div class="' + baseClass + '">' +
+                       '<div class="' + baseClass + '-close-container" ><a href="" class="' + baseClass + '-close" ng-click="turnMeOff()">&times;</a></div>' +
+                       template + '</div></div>';
             });
         } else {
             template= config.template;
-            html = '<div class="' + containerClass + '"><div class="' + baseClass + '"><a href="" class="' + baseClass +'-close" ng-click="turnMeOff()">&times;</a>' + template + '</div></div>';
+            html = '<div class="' + containerClass + '"><div class="' + baseClass + '"> ' +
+                   '<div class="' + baseClass + '-close-container"><a href="" class="' + baseClass +'-close" ng-click="turnMeOff()">&times;</a></div>' +
+                   template + '</div></div>';
         }
 
         /**
