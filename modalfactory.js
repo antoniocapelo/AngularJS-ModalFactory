@@ -84,11 +84,11 @@ app.factory('ModalFactory', function ($compile, $http, $rootScope) {
             scope.turnMeOff = turnMeOff;
 
             // if there's a modal already on the DOM, remove it before adding another
-            domElement = angular.element('.' + containerClass);
+            domElement = angular.element(document.getElementsByClassName(containerClass));
             domElement.remove();
 
             // if there's an overlay div already on the DOM, remove it before adding another
-            overlay = angular.element('.' + overlayDivClass);
+            overlay = angular.element(document.getElementsByClassName(overlayDivClass));
             overlay.remove();
 
             // if there's data passed along, copy it to the created scope
@@ -117,8 +117,8 @@ app.factory('ModalFactory', function ($compile, $http, $rootScope) {
          * Deactivates the modal
          */
         function turnMeOff() {
-            var domElement = angular.element('.' + containerClass),
-                overlay = angular.element('.' + overlayDivClass);
+            var domElement = angular.element(document.getElementsByClassName(containerClass)),
+                overlay = angular.element(document.getElementsByClassName(overlayDivClass));
 
             // Remove elements from the DOM
             if (domElement) {
