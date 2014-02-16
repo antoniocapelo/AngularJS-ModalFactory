@@ -68,7 +68,7 @@ app.factory('modalfactory', function ($compile, $http, $rootScope) {
                 html = '<div class="' + containerClass + '"><div class="' + baseClass + '"><a href="" class="' + baseClass + '-close" ng-click="turnMeOff()">&times;</a>' + template + '</div></div>';
             });
         } else {
-            template= config.template
+            template= config.template;
             html = '<div class="' + containerClass + '"><div class="' + baseClass + '"><a href="" class="' + baseClass +'-close" ng-click="turnMeOff()">&times;</a>' + template + '</div></div>';
         }
 
