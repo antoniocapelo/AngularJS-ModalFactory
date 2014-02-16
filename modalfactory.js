@@ -11,16 +11,16 @@
  *
  *  How to use:
  *
- *  1 - update the modalfactory.js to your AngularJS app name, in case you use other than "app"
+ *  1 - update the Modalfactory.js to your AngularJS app name, in case you use other than "app"
  *  2 - inject it as a controller dependency
  *  3 - instantiate the service as a new scope variable
  *  4 - use the modal functions wherever you please, in the controller 
  *
  *  Example:
  *
- *  app.controller('MainCtrl',['$scope','modalFactory', function ($scope, modalFactory) {
+ *  app.controller('MainCtrl',['$scope','Modalfactory', function ($scope, Modalfactory) {
  *      // instantiate modal service
- *      $scope.statusModal = new modalFactory({
+ *      $scope.statusModal = new Modalfactory({
  *          // your config options go here
  *      });
  *  
@@ -44,7 +44,7 @@
  *
  */
 
-app.factory('modalfactory', function ($compile, $http, $rootScope) {
+app.factory('Modalfactory', function ($compile, $http, $rootScope) {
     return function (config) {
 
         // check that there's a template provided
