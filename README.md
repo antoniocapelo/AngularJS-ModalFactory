@@ -26,9 +26,9 @@ The config object also lets the user define custom CSS classes for the modal.
 
 \- Example:
  	
- 	app.controller('MainCtrl',['$scope','Modalfactory', function ($scope, Modalfactory) {
+ 	app.controller('MainCtrl',['$scope','ModalFactory', function ($scope, ModalFactory) {
         // instantiate modal service
-        $scope.statusModal = new Modalfactory({
+        $scope.statusModal = new ModalFactory({
             // your config options go here
         });
     
